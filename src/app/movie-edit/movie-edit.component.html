@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Edit Movie</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="updateMovie(movie._id)" #MovieForm="ngForm">
+
+        <div class="form-group">
+          <label for="name">Title</label>
+          <input type="text" class="form-control" [(ngModel)]="movie.title" name="title" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!movieForm.form.valid">Update</button>
+        </div>
+      </form>
+    </div>
